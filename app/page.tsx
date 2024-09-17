@@ -1,13 +1,16 @@
+import Footer from "./Component/fotter/fotter"
+import MainPage from "./Component/Mainpage/mainpage"
+import Navbar from "./Component/Navbar/navbar"
 
-import MainPage from "./Component/Navbar/navbar"
-import Navbar from "./Component/Mainpage/mainpage"
+
 
 export default function Home (){
   return (
     <div>
-      <Navbar/>
-      <MainPage/>
-      
+
+     <Navbar/>
+     <MainPage/>
+    <Footer/>
     </div>
   )
 }
