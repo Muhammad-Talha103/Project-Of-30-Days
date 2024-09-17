@@ -16,7 +16,7 @@ export default function Footer() {
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a
-              href="https://www.facebook.com/saim.amjad.14" 
+              href="https://www.facebook.com/talha.gp.3?mibextid=ZbWKwL" 
               className="text-gray-500 text-2xl cursor-pointer hover:text-gray-900"
               target="_blank"
             >
@@ -30,7 +30,7 @@ export default function Footer() {
               <FaGithub />
             </a>
             <a
-              href="https://www.instagram.com/amjad_saim_9/" 
+              href="https://www.instagram.com/talhagp88/" 
               className="ml-4 text-gray-500 text-2xl cursor-pointer hover:text-gray-900"
               target="_blank"
             >
