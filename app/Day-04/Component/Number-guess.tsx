@@ -11,7 +11,7 @@ export default function NumberGuessingGame() {
   const [attempts, setAttempts] = useState(0); // Counts the number of attempts
   const [message, setMessage] = useState(""); // Displays messages to the user
   const [isGameOver, setIsGameOver] = useState(false); // Tracks if the game is over
- 
+
   // Function to handle when the user clicks the "Guess" button
   const handleGuess = () => {
     // Check if the guess is valid (not empty and a number)
@@ -23,14 +23,9 @@ export default function NumberGuessingGame() {
     // Increment the number of attempts
     setAttempts(attempts + 1);
 
-    // Show the guessed number and target number after each guess
-
-
     // Check if the guess is correct
     if (Number(guess) === targetNumber) {
-      setMessage(
-        `Congratulations! You guessed the number in ${attempts + 1} attempts.`
-      );
+      setMessage(`Congratulations! You guessed the number in ${attempts + 1} attempts.`);
       setIsGameOver(true); // Set the game as over
     }
     // Check if the guess is too low
@@ -57,16 +52,13 @@ export default function NumberGuessingGame() {
     setAttempts(0);
     setMessage("");
     setIsGameOver(false); // Re-enable the Guess button for a new game
-
   };
 
   return (
     <div className="bg-gradient-to-r from-blue-100 via-purple-200 to-indigo-300 min-h-screen flex items-center justify-center p-4">
       <div className="bg-white border-4 border-blue-600 rounded-lg shadow-lg px-8 py-10 text-center w-full max-w-md">
         {/* Game title */}
-        <h1 className="text-4xl font-bold text-blue-700 mb-6">
-          Number Guessing Game
-        </h1>
+        <h1 className="text-4xl font-bold text-blue-700 mb-6">Number Guessing Game</h1>
         <p className="text-lg text-gray-700 mb-4">
           Guess the number between{" "}
           <span className="text-yellow-600 font-bold">1</span> and{" "}
@@ -117,10 +109,7 @@ export default function NumberGuessingGame() {
 
         {/* Back to home link */}
         <div className="mt-6">
-          <Link
-            href="/"
-            className="text-lg font-semibold text-blue-600 hover:underline"
-          >
+          <Link href="/" className="text-lg font-semibold text-blue-600 hover:underline">
             Back to Home
           </Link>
         </div>
