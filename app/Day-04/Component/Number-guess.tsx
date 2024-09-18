@@ -11,8 +11,7 @@ export default function NumberGuessingGame() {
   const [attempts, setAttempts] = useState(0); // Counts the number of attempts
   const [message, setMessage] = useState(""); // Displays messages to the user
   const [isGameOver, setIsGameOver] = useState(false); // Tracks if the game is over
-  const [showNumbers, setShowNumbers] = useState(false); // Tracks if the guessed and target numbers should be shown
-
+ 
   // Function to handle when the user clicks the "Guess" button
   const handleGuess = () => {
     // Check if the guess is valid (not empty and a number)
@@ -25,7 +24,7 @@ export default function NumberGuessingGame() {
     setAttempts(attempts + 1);
 
     // Show the guessed number and target number after each guess
-    setShowNumbers(true);
+
 
     // Check if the guess is correct
     if (Number(guess) === targetNumber) {
@@ -58,7 +57,7 @@ export default function NumberGuessingGame() {
     setAttempts(0);
     setMessage("");
     setIsGameOver(false); // Re-enable the Guess button for a new game
-    setShowNumbers(false); // Hide guessed and target numbers
+
   };
 
   return (
