@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import 'aos/dist/aos.css'; // Import AOS styles
 import AOS from 'aos'; // Import AOS for initialization
 import { useEffect } from 'react'; // Import useEffect hook for initialization
@@ -14,19 +14,38 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div className="mx-12 mt-8 grid grid-cols-1 gap-8 hover:text-black sm:grid-cols-2 md:grid-cols-3 mb-4">
-      {Array.from({ length: 30 }).map((_, index) => (
-        <Link href={index < 9 ? `/Day-0${index + 1}` : `/Day-${index + 1}`} key={index}>
-          <div
-            data-aos="fade-up" // Add the AOS animation effect
-            className="p-12 border-3 border-blue-800 border-[5px] m-2 flex items-center justify-center cursor-pointer hover:bg-blue-100"
-            
-          >
-        
-            <h1 className="font-bold">{index < 9 ? `Day-0${index + 1}` : `Day-${index + 1}`}</h1>
-          </div>
-        </Link>
-      ))}
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Array.from({ length: 30 }).map((_, index) => {
+          const dayNumber = index + 1;
+          const isComingSoon = dayNumber >= 5; // "Coming Soon" for days after 5
+
+          return (
+            <Link
+              href={isComingSoon ? '#' : dayNumber < 10 ? `/Day-0${dayNumber}` : `/Day-${dayNumber}`}
+              key={index}
+              className="transform transition-transform hover:scale-105"
+            >
+              <div
+                data-aos="fade-up" // Add the AOS animation effect
+                className={`flex flex-col items-center justify-center h-32 rounded-lg shadow-lg p-6 border transition-all duration-300 ${
+                  isComingSoon
+                    ? 'bg-gray-200 border-gray-400 cursor-not-allowed text-gray-600'
+                    : 'bg-white hover:bg-blue-50 border-blue-500'
+                }`}
+              >
+                {isComingSoon ? (
+                  <h1 className="text-xl font-semibold text-red-500">Coming Soon</h1>
+                ) : (
+                  <h1 className="text-xl font-bold text-blue-700">
+                    {dayNumber < 10 ? `Day-0${dayNumber}` : `Day-${dayNumber}`}
+                  </h1>
+                )}
+              </div>
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }
