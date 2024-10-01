@@ -1,5 +1,5 @@
 
-import Head from 'next/head';
+
 import DigitalClock from '../Day-06/component/digital-clock/Digital-clock';
 
 export default function Home() {
