@@ -2,7 +2,7 @@ import React from 'react'
 import JokeGenerator from './component/joke-ganerater'
 
 
-export const page = () => {
+export const Home = () => {
   return (
     <div>
         <JokeGenerator/>
@@ -10,4 +10,4 @@ export const page = () => {
   )
 }
 
-export default page
+export default Home;
