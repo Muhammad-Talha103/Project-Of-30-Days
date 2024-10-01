@@ -1,5 +1,6 @@
 // app/Calculator.tsx
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 
 const Calculator = () => {
@@ -189,9 +190,15 @@ const Calculator = () => {
               =
             </button>
           </div>
+      <Link href="/">
+      <button className="bg-blue-500 text-white w-full mt-4 px-1 py-1 rounded-md transition-transform transform hover:bg-blue-600 sm:px-1 sm:py-1 md:px-1 md:py-1 lg:px-2 lg:py-2 text-sm sm:text-base md:text-lg lg:text-xl">
+        Go to Homepage
+      </button>
+      </Link>
         </form>
       </div>
     </div>
+    
   );
 };
 

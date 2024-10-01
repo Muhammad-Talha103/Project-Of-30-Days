@@ -91,12 +91,12 @@ export default function CountDownTimer() {
           {formatTime(remainingTime)}
         </div>
 
-        <div className="flex flex-col gap-4 sm:flex-row">
+        <div className="flex flex-col  gap-4 sm:flex-row">
           <Button
             // title="Start"
             icon={<FaArrowAltCircleUp />}
             onclick={handleStart}
-            color="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg shadow-md transition"
+            color="bg-green-500 px-6 py-3 flex items-center justify-center hover:bg-green-600 text-white px-6 py-2 rounded-lg shadow-md transition"
           />
 
           <button
@@ -106,12 +106,12 @@ export default function CountDownTimer() {
           >
             <div className="flex items-center justify-center">
               {isPaused ? (
-                <span className="flex items-center gap-2">
+                <span className="flex items-center px-6 py-3 gap-2">
                   {/* Resume */}
                   <GrResume />
                 </span>
               ) : (
-                <span className="flex items-center gap-2">
+                <span className="flex items-center px-6 py-3 gap-2">
                   {/* Pause */}
                   <FaCirclePause />
                 </span>
@@ -123,7 +123,7 @@ export default function CountDownTimer() {
   // title="Reset"
   icon={<BiReset />}
   onclick={handleReset}
-  color="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white px-6 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300"
+  color="bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white flex items-center justify-center px-6 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-300"
 />
 
         </div>
