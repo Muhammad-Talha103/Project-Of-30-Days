@@ -363,7 +363,7 @@ export default function JokeGenerator() {
   ];
 
   //fetcj Joke Function
-  const fetchJoke = async (language: any) => {
+  const fetchJoke = async (language: string) => {
     if (language === "urdu") {
       // Display a random Urdu joke
       const randomIndex = Math.floor(Math.random() * jokesInUrdu.length);
