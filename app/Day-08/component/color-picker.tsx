@@ -10,7 +10,7 @@ export default function ColorPicker() {
 
   // Function to handle the color change event from the input.
   // It updates the state with the new color value whenever the user selects a different color.
-  const handleChange = (event: any) => {
+  const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setColor(event.target.value);
   };
 
