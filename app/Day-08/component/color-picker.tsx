@@ -1,5 +1,6 @@
 'use client'; // Enables the component to be used as a Client Component in Next.js, required for client-side features like hooks.
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 // Defining the ColorPicker component.
@@ -55,6 +56,13 @@ export default function ColorPicker() {
     >
       {/* Displays the current color code in text format inside the color box. */}
       <p className="text-lg font-semibold">{color}</p> {/* Text styling for displaying the color code. */}
+    </div>
+    <div className="mt-6">
+      <Link href="/">
+        <button className="bg-black text-white px-4 py-2 rounded-md shadow-md transition-transform transform hover:bg-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-opacity-50 text-sm sm:text-base w-full">
+          Back To Home
+        </button>
+      </Link>
     </div>
   </div>
 </div>
