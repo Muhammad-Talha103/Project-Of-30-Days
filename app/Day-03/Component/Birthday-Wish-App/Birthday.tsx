@@ -156,9 +156,11 @@ export default function BirthdayWishApp() {
           {message}
         </p>
 
+          <Link href="/">
         <button className=" w-full px-6 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl hover:underline hover:bg-gradient-to-l transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300">
-          <Link href="/">Back to Home</Link>
+           Back to Home
         </button>
+          </Link>
       </div>
     </div>
   );

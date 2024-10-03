@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function TipCalculator() {
@@ -38,7 +39,29 @@ export default function TipCalculator() {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-200 to-blue-500">
     <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md transform transition-all hover:scale-105 duration-300">
       {/* App Title */}
-      <h1 className="text-4xl font-extrabold text-center mb-6 text-blue-600 shadow-md">
+      <Link href={"/"}>
+      <button
+        
+        className="absolute top-4 right-4 text-gray-600 hover:text-red-500 focus:outline-none"
+        aria-label="Cancel"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+              />
+          </svg>
+        </button>
+              </Link>
+      <h1 className="text-4xl font-extrabold text-center mb-6 text-blue-600 ">
         Tip Calculator
       </h1>
 
