@@ -9,7 +9,7 @@ export default function TipCalculator() {
   const [totalAmount, setTotalAmount] = useState(0);
 
   // Handle input change for tip percentage
-  const handleTipPercentage = (e: any) => {
+  const handleTipPercentage = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTipPercentage(parseFloat(e.target.value));
   };
 
